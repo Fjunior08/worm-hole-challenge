@@ -46,7 +46,7 @@ src/
 
 ```bash
 # Clone o repositório
-git clone <seu-repositorio>
+git clone https://github.com/Fjunior08/worm-hole-challenge.git
 
 # Instale as dependências
 npm install
