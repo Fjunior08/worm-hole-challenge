@@ -78,24 +78,24 @@ export const WormSimulation: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-8">
-      <div className="max-w-4xl mx-auto">
-        <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50 p-4 sm:p-6 lg:p-8">
+      <div className="max-w-6xl mx-auto">
+        <header className="text-center mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2">
             🐛 Desafio da Minhoca no Buraco
           </h1>
-          <p className="text-lg text-gray-600">
+          <p className="text-base sm:text-lg text-gray-600">
             Simulação interativa de uma minhoca tentando sair de um buraco
           </p>
         </header>
         
         {/* Configurações */}
-        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-6">
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
             Configurações do Buraco
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Profundidade do buraco (cm)
@@ -158,7 +158,7 @@ export const WormSimulation: React.FC = () => {
             <button
               onClick={handleStartSimulation}
               disabled={state === 'running'}
-              className={`px-8 py-3 rounded-lg font-semibold text-lg transition-all duration-200 ${
+              className={`px-6 sm:px-8 py-3 rounded-lg font-semibold text-base sm:text-lg transition-all duration-200 w-full sm:w-auto ${
                 state === 'running'
                   ? 'bg-gray-400 text-gray-600 cursor-not-allowed'
                   : 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl'
@@ -212,11 +212,11 @@ export const WormSimulation: React.FC = () => {
 
         {/* Resultados */}
         {result && (
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 mb-6">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4">
               Resultado da Simulação
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-gray-700 mb-2">Status</h3>
                 <p className={`text-lg font-bold ${result.success ? 'text-green-600' : 'text-red-600'}`}>
